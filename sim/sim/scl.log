@@ -1,0 +1,225 @@
+23:25:37 (lmgrd) -----------------------------------------------
+23:25:37 (lmgrd)   Please Note:
+23:25:37 (lmgrd) 
+23:25:37 (lmgrd)   This log is intended for debug purposes only.
+23:25:37 (lmgrd)   In order to capture accurate license
+23:25:37 (lmgrd)   usage data into an organized repository,
+23:25:37 (lmgrd)   please enable report logging. Use Flexera's
+23:25:37 (lmgrd)   software license administration  solution,
+23:25:37 (lmgrd)   FlexNet Manager, to  readily gain visibility
+23:25:37 (lmgrd)   into license usage data and to create
+23:25:37 (lmgrd)   insightful reports on critical information like
+23:25:37 (lmgrd)   license availability and usage. FlexNet Manager
+23:25:37 (lmgrd)   can be fully automated to run these reports on
+23:25:37 (lmgrd)   schedule and can be used to track license
+23:25:37 (lmgrd)   servers and usage across a heterogeneous
+23:25:37 (lmgrd)   network of servers including Windows NT, Linux
+23:25:37 (lmgrd)   and UNIX.
+23:25:37 (lmgrd) 
+23:25:37 (lmgrd) -----------------------------------------------
+23:25:37 (lmgrd) 
+23:25:37 (lmgrd) 
+23:25:37 (lmgrd) Server's System Date and Time: Wed Jul 31 2024 23:25:37 PDT
+23:25:37 (lmgrd) SLOG: Summary LOG statistics is enabled.
+23:25:37 (lmgrd) FlexNet Licensing (v11.19.1.0 build 285581 x64_lsb) started on yian (linux) (7/31/2024)
+23:25:37 (lmgrd) Copyright (c) 1988-2022 Flexera. All Rights Reserved.
+23:25:37 (lmgrd) World Wide Web:  http://www.flexerasoftware.com
+23:25:37 (lmgrd) License file(s): /home/summer/Synopsys/scl/2023.03/admin/license/synopsys.lic
+23:25:37 (lmgrd) lmgrd tcp-port 27000
+23:25:37 (lmgrd) (@lmgrd-SLOG@) ===============================================
+23:25:37 (lmgrd) (@lmgrd-SLOG@) === LMGRD ===
+23:25:37 (lmgrd) (@lmgrd-SLOG@) Start-Date: Wed Jul 31 2024 23:25:37 PDT
+23:25:37 (lmgrd) (@lmgrd-SLOG@) PID: 12776
+23:25:37 (lmgrd) (@lmgrd-SLOG@) LMGRD Version: v11.19.1.0 build 285581 x64_lsb ( build 285581 (ipv6))
+23:25:37 (lmgrd) (@lmgrd-SLOG@) 
+23:25:37 (lmgrd) (@lmgrd-SLOG@) === Network Info ===
+23:25:37 (lmgrd) (@lmgrd-SLOG@) Listening port: 27000
+23:25:37 (lmgrd) (@lmgrd-SLOG@) 
+23:25:37 (lmgrd) (@lmgrd-SLOG@) === Startup Info ===
+23:25:37 (lmgrd) (@lmgrd-SLOG@) Server Configuration: Single Server
+23:25:37 (lmgrd) (@lmgrd-SLOG@) Command-line options used at LS startup: -c /home/summer/Synopsys/scl/2023.03/admin/license/synopsys.lic -l scl.log 
+23:25:37 (lmgrd) (@lmgrd-SLOG@) License file(s) used:  /home/summer/Synopsys/scl/2023.03/admin/license/synopsys.lic
+23:25:37 (lmgrd) (@lmgrd-SLOG@) ===============================================
+23:25:37 (lmgrd) Starting vendor daemons ... 
+23:25:37 (lmgrd) Started snpslmd (internet tcp_port 54658 pid 12778)
+23:25:37 (snpslmd) FlexNet Licensing version v11.19.1.0 build 285581 x64_lsb
+07/31/2024 23:25:37 (snpslmd) INFO: Pooling on VENDOR_STRING is Disabled (to enable, set SCL_POOL_VS=1)
+07/31/2024 23:25:37 (snpslmd) Synopsys Corporate Licensing (SCL) Release: version SCL_2023.03
+07/31/2024 23:25:37 (snpslmd) INFO: License sanity check enabled (3600)
+07/31/2024 23:25:37 (snpslmd) INFO: File descriptor limit (soft, hard) for snpslmd: 1024, 4096
+07/31/2024 23:25:37 (snpslmd) INFO: TCP - tcp_keepalive_time - 7200 | tcp_keepalive_intvl - 75 | tcp_keepalive_probes - 9 | tcp_fin_timeout - 60 | net.ipv4.tcp_max_syn_backlog=1024 | net.core.somaxconn=128
+
+07/31/2024 23:25:37 (snpslmd) INFO: Cloud detection enabled. 1
+23:25:37 (snpslmd) SLOG: Summary LOG statistics is enabled.
+23:25:37 (snpslmd) SLOG: FNPLS-INTERNAL-CKPT1
+23:25:37 (snpslmd) SLOG: VM Status: 4
+23:25:37 (snpslmd) SLOG: FNPLS-INTERNAL-CKPT5
+23:25:37 (snpslmd) SLOG: TPM Status: 0
+23:25:37 (snpslmd) SLOG: FNPLS-INTERNAL-CKPT6
+23:25:37 (snpslmd) Server started on yian for:	SSS		
+23:25:37 (snpslmd) DWC-ETHERNET-XPCS-V3_30 DWC-ETHERNET-XPCS-V3_40 DWC-ETHERNET-XPCS-V3_50 
+23:25:37 (snpslmd) DWC-ETHERNET-XPCS-MULTIPORT DWC-AC-ETHERNET-XPCS DWC-XGXS-PCS	
+23:25:37 (snpslmd) DWC-ETHER-AP-ENTERPRISE-PCS DWC-ETHER-ENTERPRISE-PCS DWC-XGMAC	
+23:25:37 (snpslmd) DWC-AC-ETHERNET-XGMAC DWC-XGMAC-SRC	DWC-XGMAC-V2_20 
+23:25:37 (snpslmd) DWC-XGMAC-V3_20 DWC-ETHERNET-XGMAC-V3_00 DWC-ETHERNET-XGMAC-V3_10 
+23:25:37 (snpslmd) DWC-ETHERNET-XGMAC-V3_20 DWC-Ether-XGMAC-RxParser DWC-Ether-XGMAC-TSN1 
+23:25:37 (snpslmd) DWC-AMBA-Fabric-Source DWC-DMAC-Source DWC-APB-Periph-Source 
+23:25:37 (snpslmd) DWC-APB-Advanced-Source DWC-PCIE	DWC-PCIE-V5_00	
+23:25:37 (snpslmd) DWC-PCIE-G4-STND-A-SRC DWC-PCIE-G4-STND-A-V2-SRC DWC-PCIE-G4-PLUS-A-V2-SRC 
+23:25:37 (snpslmd) DWC-AC-CCIX-G25-PREM-A-SRC DWC-AP-CCIX-G25-PREM-A-V2-SRC DWC-PCIE-4-EP-H 
+23:25:37 (snpslmd) DWC-PCIE-4-EP-H-SRC DWC-CXL-PREM-A-SRC DWC-PCIE-4-EP-L 
+23:25:37 (snpslmd) DWC-PCIE-4-EP-L-SRC DWC-PCIE-4-EP-E DWC-PCIE-4-EP-E-SRC 
+23:25:37 (snpslmd) DWC-CCIX-25-EP-H DWC-CCIX-25-EP-H-SRC DWC-PCIE-G1-STND-A-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G1-PLUS-A-SRC DWC-PCIE-G1-STND-N-SRC DWC-PCIE-G1-PLUS-N-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G2-STND-N-SRC DWC-PCIE-G3-STND-A-SRC DWC-PCIE-G3-STND-N-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G4-STND-N-SRC DWC-PCIE-G5-STND-N-SRC DWC-AC-CCIX-G25-PREM-N-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G4-PLUS-A-SRC DWC-PCIE-G4-PREM-N-SRC DWC-PCIE-G4-PREM-A-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G4-PREM-N-V2-SRC DWC-PCIE-G4-PREM-A-V2-SRC DWC-AC-PCIE-G4-PREM-N-SRC 
+23:25:37 (snpslmd) DWC-AC-PCIE-G4-PREM-A-SRC DWC-AP-PCIE-G4-PREM-N-SRC DWC-AP-PCIE-G4-PREM-A-SRC 
+23:25:37 (snpslmd) DWC-AP-PCIE-G4-PREM-N-V2-SRC DWC-AP-PCIE-G4-PREM-A-V2-SRC DWC-CCIX-G25-PREM-N-SRC 
+23:25:37 (snpslmd) DWC-CCIX-G25-PREM-A-SRC DWC-CCIX-G25-PREM-N-V2-SRC DWC-CCIX-G25-PREM-A-V2-SRC 
+23:25:37 (snpslmd) DWC-AP-CCIX-G25-PREM-N-SRC DWC-AP-CCIX-G25-PREM-A-SRC DWC-AP-CCIX-G25-PREM-N-V2-SRC 
+23:25:37 (snpslmd) DWC-PCIE-GEN3-AFP DWC-PCIE-AFP	DWC-PCIE-GEN2-AFP 
+23:25:37 (snpslmd) DWC-PCIE-G4-PLUS-N-SRC DWC-PCIE-G4-STND-N-V2-SRC DWC-PCIE-G4-PLUS-N-V2-SRC 
+23:25:37 (snpslmd) DWC-CXL-PREM-N-SRC DWC-CXL-20-PREM-N-SRC DWC-CXL-20-PREM-A-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G4-PREM-A-HPC-SRC DWC-CXL-20-PREM-A-HPC-SRC DWC-USB4-PCIE-PREM-N-SRC 
+23:25:37 (snpslmd) DWC-USB4-PCIE-PREM-A-SRC DWC-PCIE-AXI	DWC-PCIE-AMBA	
+23:25:37 (snpslmd) DWC-PCIE-AUTOMOTIVE DWC-CCIX-25-EP-L DWC-CCIX-25-EP-L-SRC 
+23:25:37 (snpslmd) DWC-XBIU-SAFETY DWC-PCIE-G1-PREM-A-SRC DWC-PCIE-G1-PREM-N-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G2-STND-A-SRC DWC-PCIE-G2-PLUS-A-SRC DWC-PCIE-G2-PREM-A-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G2-PLUS-N-SRC DWC-PCIE-G2-PREM-N-SRC DWC-PCIE-G3-PLUS-A-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G3-PREM-A-SRC DWC-PCIE-G3-PLUS-N-SRC DWC-PCIE-G3-PREM-N-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G5-STND-A-SRC DWC-PCIE-G5-PLUS-A-SRC DWC-PCIE-G5-PREM-A-SRC 
+23:25:37 (snpslmd) DWC-PCIE-G5-PLUS-N-SRC DWC-PCIE-G5-PREM-N-SRC DWC-CCIX-G32-PREM-A-SRC 
+23:25:37 (snpslmd) DWC-CCIX-G32-PREM-N-SRC DWC-AP-PCIE-G1-PREM-A-SRC DWC-AP-PCIE-G1-PREM-N-SRC 
+23:25:37 (snpslmd) DWC-AP-PCIE-G2-PREM-A-SRC DWC-AP-PCIE-G2-PREM-N-SRC DWC-AP-PCIE-G3-PREM-A-SRC 
+23:25:37 (snpslmd) DWC-AP-PCIE-G3-PREM-N-SRC DWC-AP-PCIE-G5-PREM-A-SRC DWC-AP-PCIE-G5-PREM-N-SRC 
+23:25:37 (snpslmd) DWC-AC-PCIE-G2-PREM-A-SRC DWC-AC-PCIE-G2-PREM-N-SRC DWC-AC-PCIE-G3-PREM-A-SRC 
+23:25:37 (snpslmd) DWC-AC-PCIE-G3-PREM-N-SRC DWC-AC-PCIE-G5-PREM-A-SRC DWC-AC-PCIE-G5-PREM-N-SRC 
+23:25:37 (snpslmd) DWC-AP-CCIX-G32-PREM-A-SRC DWC-AP-CCIX-G32-PREM-N-SRC DWC-PCIE-G5-PREM-A-HPC-SRC 
+23:25:37 (snpslmd) ts28nph41p10asdvl01ms ts28nph41p10asdvl01ms_fe ts28nph41p10asdvl01ms_be 
+23:25:37 (snpslmd) ts28nph41p11sad2l02ms ts28nph41p11sad2l02ms_fe ts28nph41p11sad2l02ms_be 
+23:25:37 (snpslmd) ts28nph41p11sadgl128s ts28nph41p11sadgl128s_fe ts28nph41p11sadgl128s_be 
+23:25:37 (snpslmd) ts28nph41p11sadtl128s ts28nph41p11sadtl128s_fe ts28nph41p11sadtl128s_be 
+23:25:37 (snpslmd) ts28nph41p11sasrl128s ts28nph41p11sasrl128s_fe ts28nph41p11sasrl128s_be 
+23:25:37 (snpslmd) ts28nph41p11sassl01ms ts28nph41p11sassl01ms_fe ts28nph41p11sassl01ms_be 
+23:25:37 (snpslmd) ts28nph42p11sadgl128s ts28nph42p11sadgl128s_fe ts28nph42p11sadgl128s_be 
+23:25:37 (snpslmd) ts28nph42p11sadul128s ts28nph42p11sadul128s_fe ts28nph42p11sadul128s_be 
+23:25:37 (snpslmd) ts28nph42p22sadsl01ms ts28nph42p22sadsl01ms_fe ts28nph42p22sadsl01ms_be 
+23:25:37 (snpslmd) VIP-AMBA3-SVT	VIP-AMBA-SVT	VIP-AMBA-APB-SVT 
+23:25:37 (snpslmd) VIP-AMBA-AXI-SVT VIP-AMBA-AHB-SVT Synopsys	
+23:25:37 (snpslmd) Synopsys-Release Synopsys-Queue	DesignWare	
+23:25:37 (snpslmd) DesignWare-Foundation RTL-Architect	RTLA-Debug	
+23:25:37 (snpslmd) Design-Compiler Design-Compiler-NXT DC64		
+23:25:37 (snpslmd) DC-Beta		DC-Cadence-Interface DC-Expert	
+23:25:37 (snpslmd) DCExpert-PrimeTime DC-Extension	DC-Graphical	
+23:25:37 (snpslmd) DC-Falcon-Interface DC-FPGA-Accelerator DC-FPGA-Add-On	
+23:25:37 (snpslmd) DC-FPGA-Add-On-to-DC DC-FPGA-Features DC-Layout-Interface 
+23:25:37 (snpslmd) DCM-Delay-Calculation DC-Min-Area-Retime DC-SDF-Interface 
+23:25:37 (snpslmd) DC-Debug	DCT-Congestion	DCT-GUI		
+23:25:37 (snpslmd) DC-Topographical DC-Ultra	DC-Ultra-Features 
+23:25:37 (snpslmd) DC-Ultra-Opt	DC-XG		HDL-Compiler	
+23:25:37 (snpslmd) Power-Optimization BOA-BRT		Test-Compiler	
+23:25:37 (snpslmd) Test-Compiler-Plus Test-DFTC-TMAX	Design-Vision	
+23:25:37 (snpslmd) Design-Analyzer Test-Platform-RTL checker		
+23:25:37 (snpslmd) oemunlock	BasePolicySO	gui		
+23:25:37 (snpslmd) save_restore	constraints_SDCgen constraints_SDCmerge 
+23:25:37 (snpslmd) constraints_soc_abstraction constraintsso	constraints_mgmt 
+23:25:37 (snpslmd) constraints_modemerge dft_dsmso	dft_soc_abstraction 
+23:25:37 (snpslmd) dftso		system_verilog	txvso		
+23:25:37 (snpslmd) vhdl		SG-Verdi-Plugin Formality	
+23:25:37 (snpslmd) Formality-DPX	Formality-Ultra Formality-LogicECO 
+23:25:37 (snpslmd) Formality-Advanced Formality-Distributed Formality-DV	
+23:25:37 (snpslmd) Formality-E1	Formality-ESP	Formality-TransForm 
+23:25:37 (snpslmd) Formality-Transit Formality-TX	PrimeTime	
+23:25:37 (snpslmd) PrimeTime-C-Interface PrimeTime-New-Technology PrimeTime-New-Technology8 
+23:25:37 (snpslmd) ECO-New-Tech-Node-PC synplifypremier synplifypremierdp 
+23:25:37 (snpslmd) synplifypremierurc identdebugger	identinstrumentor 
+23:25:37 (snpslmd) SYNOPSYS_ANOMALY coreAssembler	DWC-coreAssembler 
+23:25:37 (snpslmd) coreConsultant	DWC-coreConsultant coreBuilder	
+23:25:37 (snpslmd) DWC-coreBuilder coreDeveloper	DWC-coreDeveloper 
+23:25:37 (snpslmd) VERDI-ULTRA	Verdi		Verdi-2-Elite-Pkg 
+23:25:37 (snpslmd) VERDI-ELITE	VERDI-SX	VerdiCoverage	
+23:25:37 (snpslmd) VerdiFaultAnalysis VerdiPerformanceAnalyzer VERDISIGNOFF_CDC 
+23:25:37 (snpslmd) VERDISIGNOFF_LP VerdiSimDB	VerdiTransactionDebugUltra 
+23:25:37 (snpslmd) Verdi_HwSwDebug Verdi-1-Base-Pkg VERDISIGNOFF	
+23:25:37 (snpslmd) Vera		Vera_debug	Vera_rtime	
+23:25:37 (snpslmd) VCS-BASE-COMPILE VCS-BASE-RUNTIME VCSAMSCompiler	
+23:25:37 (snpslmd) VCSAMSCompiler_Net VCSAMSRuntime	VCSAMSRuntime_Net 
+23:25:37 (snpslmd) VCSCompile_Net	VCSCompile_Node VCSMXCompiler_Net 
+23:25:37 (snpslmd) VCSTools	VCSTools_Net	VCSTools_Node	
+23:25:37 (snpslmd) VCSCompiler	VCSCompiler_Net VCSCompiler_Node 
+23:25:37 (snpslmd) VCSDebugger	VCSDebugger_Net VCSDebugger_Node 
+23:25:37 (snpslmd) VCS-Express-Compile VCS-Express-Runtime VCSiCompile	
+23:25:37 (snpslmd) VCSiCompile_Net VCSiCompile_Node VCSiCompiler	
+23:25:37 (snpslmd) VCSiCompiler_Net VCSiCompiler_Node VCSiDebugger	
+23:25:37 (snpslmd) VCSiDebugger_Net VCSiDebugger_Node VCSiRuntime	
+23:25:37 (snpslmd) VCSiRuntime_Net VCSiRuntime_Node VCSiRuntimeLimited 
+23:25:37 (snpslmd) VCSiRuntimeLimited_Net VCSiRuntimeLimited_Node VCSlm_Hm	
+23:25:37 (snpslmd) VCSlm_Hm_Net	VCSlm_Hm_Node	VCSMXiRunTime_Net 
+23:25:37 (snpslmd) VCSMXRunTime_Net VCSNativeCode	VCSNativeCode_Net 
+23:25:37 (snpslmd) VCSNativeCode_Node VCSOldPostProcDebugger_Net VCSOldPostProcDebugger_Node 
+23:25:37 (snpslmd) VCSParallelCompiler VCSParallelCompiler_Net VCSParallelCompiler_Node 
+23:25:37 (snpslmd) VCSParallelRuntime VCSParallelRuntime_Net VCSParallelRuntime_Node 
+23:25:37 (snpslmd) VCSParallelThread VCSParallelThread_Net VCSParallelThread_Node 
+23:25:37 (snpslmd) VCSPostProcDebugger VCSPostProcDebugger_Net VCSPostProcDebugger_Node 
+23:25:37 (snpslmd) VCSRuntime	VCSRuntime_Net	VCSRuntime_Node 
+23:25:37 (snpslmd) VCSRuntimeLimited VCSRuntimeLimited_Net VCSRuntimeLimited_Node 
+23:25:37 (snpslmd) VT_Visual	VT_VSO_GEN	VCS-ELITE-RUNTIME 
+23:25:37 (snpslmd) Delphi-Adyton	Delphi-Adyton-New-Tech-CRL VC-FORMAL-AEP	
+23:25:37 (snpslmd) VC-FORMAL-CC	VC-FORMAL-FCA	VC-FORMAL-FPV	
+23:25:37 (snpslmd) VC-FORMAL-FRV	VC-FORMAL-FXP	VC-FORMAL-SEQ	
+23:25:37 (snpslmd) VC-SMART-SEARCH VC-STATIC-VERDI-PLUGIN VCFV-Verdi-Plugin 
+23:25:37 (snpslmd) Library-Compiler integrator	builder		
+23:25:37 (snpslmd) virtual_compiler verifier	planner		
+23:25:37 (snpslmd) si_browser	vmc		em_leaf		
+23:25:37 (snpslmd) em_pg		em_star		em_ikos		
+23:25:37 (snpslmd) em_vddmin	em_test_nwell	em_ts28hpcp_overdrive 
+23:25:37 (snpslmd) em_ts28hpcp_underdrive 
+23:25:37 (snpslmd) 
+23:25:37 (snpslmd) Licenses are case sensitive for TE_CATS
+23:25:37 (snpslmd) 
+23:25:37 (snpslmd) EXTERNAL FILTERS are OFF
+23:25:37 (lmgrd) snpslmd using TCP-port 54658
+23:25:37 (snpslmd) Serving features for the following vendor names:
+ snpslmd  ACAD  adalmd  anagram  arcd  atrenta  avantd  CADABRA  chrysalisd  cowared  doradod  EPIC  eved  extremed  fishtail  hscd  innologd  ISE-TCADd  knights  magma  metasoftd  mwflexd  nassd  nsysnvs  numeritchd  pdld  perflmd  riod  saber_dmn  sandwork  sclmgrd  sigmacd  SIINT  simple  snpsOEM1  snslmgrd  ssilmd  synforad  synopsysd  synplctyd  targetld  TAVEREN  TE_CATS  tmald  vastlmd  vcsd  wlld  
+07/31/2024 23:25:37 (snpslmd) ------------------------------------------------------------------
+07/31/2024 23:25:37 (snpslmd) Checking the integrity of the license file...
+07/31/2024 23:25:37 (snpslmd) Valid SSS feature found.
+07/31/2024 23:25:37 (snpslmd) The feature is needed to enable the other keys in your license file.
+07/31/2024 23:25:37 (snpslmd) Licensed to RnD Moonl1ght Center, JSC
+07/31/2024 23:25:37 (snpslmd) Siteid: 17777, Server Hostid: 000c2919331c, Issued on: 11/30/2026
+07/31/2024 23:25:37 (snpslmd) ------------------------------------------------------------------
+07/31/2024 23:25:37 (snpslmd) INFO: Server WAN NC data enabled
+23:25:37 (snpslmd) SLOG: Statistics Log Frequency is 240 minute(s).
+23:25:37 (snpslmd) SLOG: TS update poll interval is 0. TS update is detected by midnight reread only.
+23:25:37 (snpslmd) SLOG: Activation borrow reclaim percentage is 0.
+23:25:37 (snpslmd) (@snpslmd-SLOG@) ===============================================
+23:25:37 (snpslmd) (@snpslmd-SLOG@) === Vendor Daemon ===
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Vendor daemon: snpslmd
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Start-Date: Wed Jul 31 2024 23:25:37 PDT
+23:25:37 (snpslmd) (@snpslmd-SLOG@) PID: 12778
+23:25:37 (snpslmd) (@snpslmd-SLOG@) VD Version: v11.19.1.0 build 285581 x64_lsb ( build 285581 (ipv6))
+23:25:37 (snpslmd) (@snpslmd-SLOG@) 
+23:25:37 (snpslmd) (@snpslmd-SLOG@) === Startup/Restart Info ===
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Options file used: None
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Is vendor daemon a CVD: Yes
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Is FlexNet Licensing Service installed and compatible: No
+23:25:37 (snpslmd) (@snpslmd-SLOG@) FlexNet Licensing Service Version: -NA-
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Is TS accessed: No
+23:25:37 (snpslmd) (@snpslmd-SLOG@) TS access time: -NA-
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Number of VD restarts since LS startup: 0
+23:25:37 (snpslmd) (@snpslmd-SLOG@) 
+23:25:37 (snpslmd) (@snpslmd-SLOG@) === Network Info ===
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Listening port: 54658
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Daemon select timeout (in seconds): 1
+23:25:37 (snpslmd) (@snpslmd-SLOG@) 
+23:25:37 (snpslmd) (@snpslmd-SLOG@) === Host Info ===
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Host used in license file: yian
+23:25:37 (snpslmd) (@snpslmd-SLOG@) HostID node-locked in license file: 000c2919331c 
+23:25:37 (snpslmd) (@snpslmd-SLOG@) HostID of the License Server: 000c2919331c
+23:25:37 (snpslmd) (@snpslmd-SLOG@) Running on Hypervisor: Unknown Hypervisor
+23:25:37 (snpslmd) (@snpslmd-SLOG@) ===============================================
+23:25:37 (snpslmd) Ecomms: Encrypted Communication disabled
+23:25:37 (snpslmd) TCP_NODELAY NOT enabled
+23:25:37 (snpslmd) Listener Thread: running
