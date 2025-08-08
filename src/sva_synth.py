@@ -13,7 +13,7 @@ from . import gen_network
 from . import sva_to_sv
 
 
-def sva_synth(source_file_path, output_dir, tar_file_root_name) -> dict:
+def sva_synth(source_file_path, output_dir, tar_file_root_name, img_format="svg") -> dict:
     """将 sva 转换为 sv 状态机以及生成中间一系列文件
     生成的 sv 模块名为 {tar_file_root_name}, 文件名为 {tar_file_root_name}.sv
     """
@@ -27,18 +27,18 @@ def sva_synth(source_file_path, output_dir, tar_file_root_name) -> dict:
 
     tar_file_root_path = f"{output_dir}/{tar_file_root_name}"
     
-    ast_img_path = f'{tar_file_root_path}.ast.png'
+    ast_img_path = f'{tar_file_root_path}.ast.{img_format}'
 
-    nfa_img_path  = f'{tar_file_root_path}.nfa.png'
+    nfa_img_path  = f'{tar_file_root_path}.nfa.{img_format}'
     nfa_json_path = f'{tar_file_root_path}.nfa.json'
 
-    nfa_renamed_img_path  = f'{tar_file_root_path}.renamed.nfa.png'
+    nfa_renamed_img_path  = f'{tar_file_root_path}.renamed.nfa.{img_format}'
     nfa_renamed_json_path = f'{tar_file_root_path}.renamed.nfa.json'
 
-    dfa_img_path  = f'{tar_file_root_path}.dfa.png'
+    dfa_img_path  = f'{tar_file_root_path}.dfa.{img_format}'
     dfa_json_path = f'{tar_file_root_path}.dfa.json'
 
-    dfa_digraph_img_path  = f'{tar_file_root_path}.dfa_digraph.png'
+    dfa_digraph_img_path  = f'{tar_file_root_path}.dfa_digraph.{img_format}'
     dfa_digraph_json_path = f'{tar_file_root_path}.dfa_digraph.json'
 
     sv_path    = f'{tar_file_root_path}.sv'
@@ -73,7 +73,7 @@ def sva_synth(source_file_path, output_dir, tar_file_root_name) -> dict:
     ast : sva_ast.AstCreate = sva_parser.parser.parse(source_file_content)
     ast_G = ast.ast_gen_g()
     pydot_graphic = to_pydot(ast_G)
-    pydot_graphic.write(ast_img_path, format='png', prog="dot")
+    pydot_graphic.write(ast_img_path, format=img_format, prog="dot")
     print(f"[Info] ast 图生成路径 : {ast_img_path}")
 
 
@@ -85,7 +85,7 @@ def sva_synth(source_file_path, output_dir, tar_file_root_name) -> dict:
     nfa.clean(2)
     # nfa.nfa_show()
     pydot_graphic  = to_pydot(nfa.G)
-    pydot_graphic.write(nfa_img_path, format='png', prog="dot")
+    pydot_graphic.write(nfa_img_path, format=img_format, prog="dot")
     gen_network.nfa_to_json(nfa,nfa_json_path)
     print(f"[Info] nfa 图生成路径 : {nfa_img_path}")
     print(f"[Info] nfa json 路径 : {nfa_json_path}")
@@ -96,7 +96,7 @@ def sva_synth(source_file_path, output_dir, tar_file_root_name) -> dict:
     gen_network.rename_to_number(nfa_renamed)
     nfa_renamed.clean(2)
     pydot_graphic  = to_pydot(nfa_renamed.G)
-    pydot_graphic.write(nfa_renamed_img_path, format='png', prog="dot")
+    pydot_graphic.write(nfa_renamed_img_path, format=img_format, prog="dot")
     gen_network.nfa_to_json(nfa_renamed,nfa_renamed_json_path)
     print(f"[Info] nfa_renamed 图生成路径 : {nfa_renamed_img_path}")
     print(f"[Info] nfa_renamed json 路径 : {nfa_renamed_json_path}")
@@ -105,7 +105,7 @@ def sva_synth(source_file_path, output_dir, tar_file_root_name) -> dict:
     print(f"\n[Info] 正在生成 dfa ")
     dfa = gen_network.nfa_to_dfa(nfa)
     pydot_graphic  = to_pydot(dfa.G)
-    pydot_graphic.write(dfa_img_path, format='png', prog="dot")
+    pydot_graphic.write(dfa_img_path, format=img_format, prog="dot")
     gen_network.nfa_to_json(dfa,dfa_json_path)
     print(f"[Info] dfa 图生成路径 : {dfa_img_path}")
 
@@ -113,7 +113,7 @@ def sva_synth(source_file_path, output_dir, tar_file_root_name) -> dict:
     dfa_digraph = dfa.copy()
     dfa_digraph.to_digraph()
     pydot_graphic  = to_pydot(dfa_digraph.G)
-    pydot_graphic.write(dfa_digraph_img_path, format='png', prog="dot")
+    pydot_graphic.write(dfa_digraph_img_path, format=img_format, prog="dot")
     gen_network.nfa_to_json(dfa_digraph,dfa_digraph_json_path)
     print(f"[Info] dfa_digraph 图生成路径 : {dfa_digraph_img_path}")
 

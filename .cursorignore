@@ -1,0 +1,7 @@
+demo/
+**/.vscode/
+**/__pycache__/
+output/
+.env
+**/parser.out
+**/parsetab.py
