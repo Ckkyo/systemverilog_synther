@@ -5,12 +5,12 @@ import argparse
 import networkx as nx
 from networkx.drawing.nx_pydot import to_pydot
 
-import sva_ast
-import sva_parser
-import ast_op
-import gen_network
-import gen_network
-import sva_to_sv
+from . import sva_ast
+from . import sva_parser
+from . import ast_op
+from . import gen_network
+from . import gen_network
+from . import sva_to_sv
 
 
 def sva_synth(source_file_path, output_dir, tar_file_root_name) -> dict:

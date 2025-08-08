@@ -1,6 +1,6 @@
 import ply.yacc as yacc
-import sva_lexer
-from sva_ast import *
+from . import sva_lexer
+from .sva_ast import *
 
 
 

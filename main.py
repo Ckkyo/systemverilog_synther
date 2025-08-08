@@ -1,7 +1,7 @@
 import sys
 
-import gen_network
-sys.path.append("./src")
+from src import gen_network
+# sys.path.append("./src")
 
 import os.path
 import os
@@ -150,8 +150,9 @@ def main_nfa_run(min_test_id,max_test_id, test_tar : str = "nfa", simulation=Fal
     max_test_id : int
         最大测试编号
     """
-    ssh_summer = SummerSSH()
-    ssh_summer.connect()
+    if simulation:
+        ssh_summer = SummerSSH()
+        ssh_summer.connect()
 
     mod_dir = os.path.dirname(__file__)
     mod_dir_linux = "/home/summer/prj/sva_synth/python/lex"

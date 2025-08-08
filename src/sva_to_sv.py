@@ -4,8 +4,6 @@ import json
 import os
 import re
 
-from gen_network import nfa_to_json
-
 
 def generate_file(tar_fpath, tpl_fpath, **params):
     with open(tpl_fpath, 'r', encoding='utf-8') as fp:

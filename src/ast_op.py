@@ -4,9 +4,9 @@
 
 from networkx.drawing.nx_pydot import to_pydot
 
-import gen_network
+from . import gen_network
 # from sva_ast import OperatorCreate
-from sva_ast import AstCreate
+from .sva_ast import AstCreate
 
 
 

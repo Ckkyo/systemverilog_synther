@@ -23,4 +23,22 @@
 📧 1169149623@qq.com
 💻（或在 GitHub 上提问）
 
-我会乐意解答您的问题或探讨相关内容。
+我会乐意解答您的问题或探讨相关内容。 
+
+## 环境  
+
+需要安装以下包：  
+
+```
+networkx  
+matplotlib  
+IPython
+pydot
+paramiko
+ply
+jinja2
+```  
+
+```
+graphviz
+```

@@ -4,6 +4,9 @@ import enum
 from importlib.util import LazyLoader
 import networkx as nx
 import matplotlib.pyplot as plt
+import json
+from copy import deepcopy
+from networkx.drawing.nx_pydot import to_pydot
 import networkx
 from networkx.drawing.nx_pydot import to_pydot
 from numpy import isin
@@ -13,8 +16,13 @@ import io
 
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+# ====================================================================
 
-from label_tools import get_compl
+
+from .nfa_run import nfa_run_one_step
+from .label_tools import clear_excl_mark_of_set
+from .label_tools import *
+from .label_tools import get_compl
 need_kill = False
 
 
@@ -274,18 +282,7 @@ class nfa_create():
 
                             
 
-# ====================================================================
-import re
-import json
-from copy import deepcopy
-from functools import reduce
-from networkx.drawing.nx_pydot import to_pydot
-import networkx as nx
 
-from nfa_run import nfa_run_one_step
-from label_tools import clear_excl_mark_of_set
-from gen_network import nfa_create
-from label_tools import *
 
 
 def nfa_to_json(nfa : nfa_create, fpath = None):
@@ -365,9 +362,9 @@ def nfa_to_dfa(nfa0 : nfa_create, state_mapping = dict(), mutually_exclusive_set
 
 
             if len(nfa_path_labels |  DELAY_1_SET | TRUE_SET) == 2:
-                dfa_inputs : list = [set(['__delay1'])]
+                dfa_inputs = [set(['__delay1'])]
             else:
-                dfa_inputs : list = get_sub_sets_with_inv(nfa_path_labels - DELAY_1_SET - TRUE_SET)
+                dfa_inputs = get_sub_sets_with_inv(nfa_path_labels - DELAY_1_SET - TRUE_SET)
 
             # 为当前状态添加边和子节点
             for dfa_input in dfa_inputs:

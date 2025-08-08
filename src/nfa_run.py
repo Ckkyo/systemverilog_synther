@@ -2,9 +2,12 @@
 # import matplotlib.pyplot as plt
 # import graphviz as gz
 import enum
+from typing import TYPE_CHECKING
 from networkx.drawing.nx_pydot import to_pydot
-import gen_network
-from label_tools import *
+from .label_tools import *
+
+if TYPE_CHECKING:
+    from .gen_network import nfa_create
 nfa_run_debug = False
 report_status = False
 
@@ -20,7 +23,7 @@ def check_node_has_label(G, node, label) -> set:
 
 
 
-def nfa_run_one_step(nfa : gen_network.nfa_create, cur_st : set, input_set : set, iter_ = False, fd = None,path_labels = set()):
+def nfa_run_one_step(nfa: "nfa_create", cur_st: set, input_set: set, iter_ = False, fd = None, path_labels = set()):
     next_st = set()
     cur_st_loop = cur_st.copy()
     while(len(cur_st_loop) != 0):
@@ -113,7 +116,7 @@ def nfa_run_n_step(nfa, cur_st , input_lists , times):
         cst = next_st
     return next_st
 
-def nfa_run_n_step_multi_thread(nfa : gen_network.nfa_create, cur_st , input_lists , times, fd = None):
+def nfa_run_n_step_multi_thread(nfa: "nfa_create", cur_st , input_lists , times, fd = None):
     """nfa 从状态 cur_st 向后运行 n 到 1 次
     第一次循环开始 : next_st_list = [cur_st]
     第二次循环开始 : next_st_list = [cur_st, nfa_run_n_step(nfa,cur_st, input_lists,times = 1)]
