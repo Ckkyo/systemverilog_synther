@@ -33,12 +33,12 @@
 networkx  
 matplotlib  
 IPython
-pydot
+pydot // 用于图片生成
 paramiko
 ply
 jinja2
 ```  
 
 ```
-graphviz
+graphviz // 用于图片生成
 ```
