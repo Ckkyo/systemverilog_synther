@@ -1,6 +1,7 @@
 import ply.yacc as yacc
 from . import sva_lexer
 from .sva_ast import *
+from pathlib import Path
 
 
 
@@ -911,5 +912,28 @@ def p_error(p):
     print(f'Syntax error in input! state = {parser.state}')
     print(p)
 
-# Build the parser
-parser = yacc.yacc(debug=True)
+def _should_rebuild_parsetab(parsetab_file: Path, source_files: list[Path]) -> bool:
+    """如果 `parsetab` 不存在，或比任一源码更旧，则需要重建。"""
+    if not parsetab_file.exists():
+        return True
+    try:
+        parsetab_mtime = parsetab_file.stat().st_mtime
+        latest_src_mtime = max(src.stat().st_mtime for src in source_files)
+        return parsetab_mtime < latest_src_mtime
+    except FileNotFoundError:
+        return True
+
+# Build the parser（仅在需要时写入表/调试文件）
+_base_dir = Path(__file__).resolve().parent
+_parsetab_module = 'src.parsetab_sva'
+_parsetab_path = _base_dir / 'parsetab_sva.py'
+_source_paths = [Path(__file__).resolve(), Path(sva_lexer.__file__).resolve()]
+_needs_rebuild = _should_rebuild_parsetab(_parsetab_path, _source_paths)
+
+parser = yacc.yacc(
+    tabmodule=_parsetab_module,
+    outputdir=str(_base_dir),
+    write_tables=_needs_rebuild,
+    debug=_needs_rebuild,
+    optimize=not _needs_rebuild
+)

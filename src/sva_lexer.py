@@ -1,4 +1,5 @@
 import ply.lex  as lex
+from pathlib import Path
 
 tokens = (
     # 通用关键字
@@ -303,4 +304,25 @@ def t_error(t):
     print("Illegal character '%s'" % t.value[0])
     t.lexer.skip(1)
 
-lexer = lex.lex()
+def _should_rebuild_lextab(lextab_file: Path, source_files: list[Path]) -> bool:
+    if not lextab_file.exists():
+        return True
+    try:
+        lextab_mtime = lextab_file.stat().st_mtime
+        latest_src_mtime = max(src.stat().st_mtime for src in source_files)
+        return lextab_mtime < latest_src_mtime
+    except FileNotFoundError:
+        return True
+
+_base_dir = Path(__file__).resolve().parent
+_lextab_module = 'src.lextab_sva'
+_lextab_path = _base_dir / 'lextab_sva.py'
+_source_paths = [Path(__file__).resolve()]
+_needs_rebuild = _should_rebuild_lextab(_lextab_path, _source_paths)
+
+lexer = lex.lex(
+    lextab=_lextab_module,
+    optimize=not _needs_rebuild,
+    outputdir=str(_base_dir),
+    debug=_needs_rebuild
+)
